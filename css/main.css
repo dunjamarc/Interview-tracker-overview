@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+header {
+  background-color: #418d8d;
+  width: 100%;
+  text-align: center;
+  padding: 15px; }
+
+.container {
+  max-width: 1200px;
+  margin: 30px auto; }
+  .container .row:first-of-type {
+    border-bottom: 1px solid gray; }
+
+/*# sourceMappingURL=main.css.map */
