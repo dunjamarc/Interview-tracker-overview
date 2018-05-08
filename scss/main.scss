@@ -16,6 +16,14 @@ header {
     margin: 30px auto;
     .row:first-of-type {
         border-bottom: 1px solid gray;
+        padding-bottom: 25px;
     }
 }
 
+.form-control {
+    max-width: 200px;
+}
+
+.card {
+    margin-top: 25px;
+}
