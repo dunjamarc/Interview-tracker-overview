@@ -1,3 +1,3 @@
-import allCandidates from './mainModule.js';
+import onLoadPage from './mainModule.js';
 
-allCandidates();
+onLoadPage();
