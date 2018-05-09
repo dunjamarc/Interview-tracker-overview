@@ -1,3 +1,4 @@
+$main-color: rgb(65, 141, 141);
 
 * {
     margin: 0;
@@ -5,10 +6,13 @@
 }
 
 header {
-    background-color: rgb(65, 141, 141);
+    background-color: $main-color;
     width: 100%;
     text-align: center;
     padding: 15px;
+    h1 {
+        color: #fff;
+    }
 }
 
 .container {
@@ -26,4 +30,13 @@ header {
 
 .card {
     margin-top: 25px;
+}
+
+a:hover {
+    text-decoration: none;
+    color: $main-color;
+}
+
+a {
+    color: #000;
 }

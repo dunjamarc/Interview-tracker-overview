@@ -7,6 +7,8 @@ header {
   width: 100%;
   text-align: center;
   padding: 15px; }
+  header h1 {
+    color: #fff; }
 
 .container {
   max-width: 1200px;
@@ -20,5 +22,12 @@ header {
 
 .card {
   margin-top: 25px; }
+
+a:hover {
+  text-decoration: none;
+  color: #418d8d; }
+
+a {
+  color: #000; }
 
 /*# sourceMappingURL=main.css.map */

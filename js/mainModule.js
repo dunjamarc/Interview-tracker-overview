@@ -13,7 +13,11 @@ const allCandidates = () => {
             candidates.forEach(candidate => {
                 const oneCandidate = createCandidate(candidate.id, candidate.name, candidate.birthday, candidate.email, candidate.education, candidate.avatar);
                 candidatesList.push(oneCandidate);
+                viewCandidates(oneCandidate);
             })
+        })
+        .then(() => {
+            switchToSingleCandidate();
         })
 }
 
@@ -34,6 +38,19 @@ const searchedCandidates = () => {
 const onLoadPage = () => {
     document.querySelector('input').addEventListener('keyup', searchedCandidates);
     allCandidates();
+
+}
+
+const switchToSingleCandidate = () => {
+    let cardLinks = document.querySelectorAll('.cardLink');
+    
+    cardLinks.forEach(el => {
+        el.addEventListener('click', (event) => {
+            let candidateId = el.getAttribute('id');
+            localStorage.setItem("id", candidateId);
+        });
+        
+    })
 }
 
 export default onLoadPage;

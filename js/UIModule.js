@@ -24,7 +24,12 @@ const viewCandidates = candidate => {
     cardBody.appendChild(p);
     card.appendChild(img);
     card.appendChild(cardBody);
-    wrapDiv.appendChild(card);
+    let link = document.createElement('a');
+    link.setAttribute("href", "#");
+    link.setAttribute("class", "cardLink");
+    link.setAttribute("id", candidate.id);
+    link.appendChild(card);
+    wrapDiv.appendChild(link);
 
     document.querySelector('.main').appendChild(wrapDiv);
 
