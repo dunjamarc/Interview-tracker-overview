@@ -1,3 +1,3 @@
-import onLoadPage from './mainModule.js';
+import { onLoadPage } from './mainModule.js';
 
 onLoadPage();

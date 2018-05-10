@@ -1,5 +1,5 @@
 import createCandidate from './dataModule.js';
-import viewCandidates from './UIModule.js';
+import { viewCandidates, viewSingleCandidate } from './UIModule.js';
 
 let candidatesList = [];
 
@@ -35,7 +35,7 @@ const searchedCandidates = () => {
     })
 }
 
-const onLoadPage = () => {
+export const onLoadPage = () => {
     document.querySelector('input').addEventListener('keyup', searchedCandidates);
     allCandidates();
 
@@ -53,4 +53,14 @@ const switchToSingleCandidate = () => {
     })
 }
 
-export default onLoadPage;
+export const singleCandidate = () => {
+    let id = localStorage.getItem('id');
+
+    fetch('http://localhost:3333/api/candidates')
+        .then(response => response.json())
+        .then(candidates => {
+            let singleCandidate = candidates.filter(el => el.id == id);            
+            viewSingleCandidate(singleCandidate[0]);
+        })
+}
+

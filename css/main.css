@@ -13,9 +13,10 @@ header {
 .container {
   max-width: 1200px;
   margin: 30px auto; }
-  .container .row:first-of-type {
-    border-bottom: 1px solid gray;
-    padding-bottom: 25px; }
+
+.search {
+  border-bottom: 1px solid gray;
+  padding-bottom: 25px; }
 
 .form-control {
   max-width: 200px; }
@@ -29,5 +30,18 @@ a:hover {
 
 a {
   color: #000; }
+
+.title {
+  color: gray;
+  font-size: 14px; }
+
+div.info h3 {
+  margin-left: 30px;
+  margin-bottom: 40px;
+  font-size: 18px; }
+
+.img-fluid {
+  width: 100%;
+  height: auto; }
 
 /*# sourceMappingURL=main.css.map */

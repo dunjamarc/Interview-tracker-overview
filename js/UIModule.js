@@ -1,6 +1,5 @@
 
-
-const viewCandidates = candidate => {
+export const viewCandidates = candidate => {
     let wrapDiv = document.createElement('div');
     wrapDiv.setAttribute("class", "col-md-3 col-sm-6 col-xs-12");
     let card = document.createElement('div');
@@ -25,7 +24,7 @@ const viewCandidates = candidate => {
     card.appendChild(img);
     card.appendChild(cardBody);
     let link = document.createElement('a');
-    link.setAttribute("href", "#");
+    link.setAttribute("href", "singleCandidate.html");
     link.setAttribute("class", "cardLink");
     link.setAttribute("id", candidate.id);
     link.appendChild(card);
@@ -35,6 +34,15 @@ const viewCandidates = candidate => {
 
 }
 
+export const viewSingleCandidate = singleCandidate => {
 
+    if (singleCandidate.avatar == "") {
+        singleCandidate.avatar = "http://budhubz.com/wp-content/themes/budhubs/images/noavatar.png"
+    }
+    document.querySelector('img').setAttribute("src", singleCandidate.avatar);
+    document.querySelector('#name').innerHTML = singleCandidate.name;    
+    document.querySelector('#email').innerHTML = singleCandidate.email;
+    document.querySelector('#dob').innerHTML = singleCandidate.birthday;
+    document.querySelector('#edu').innerHTML = singleCandidate.education;
+}
 
-export default viewCandidates;
