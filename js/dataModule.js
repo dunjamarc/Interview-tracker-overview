@@ -8,8 +8,10 @@ class Candidate {
         this.education = education;
         this.avatar = avatar;
     }
+
 }
 
 const createCandidate = (id, name, birthday, email, education, avatar) => new Candidate(id, name, birthday, email, education, avatar);
 
 export default createCandidate;
+

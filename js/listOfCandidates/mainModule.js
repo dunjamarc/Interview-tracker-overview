@@ -1,5 +1,5 @@
-import createCandidate from './dataModule.js';
-import { viewCandidates, viewSingleCandidate } from './UIModule.js';
+import createCandidate from '../dataModule.js';
+import viewCandidates from './UIModule.js';
 
 let candidatesList = [];
 
@@ -22,7 +22,7 @@ const allCandidates = () => {
 }
 
 
-const searchedCandidates = () => {
+/*const searchedCandidates = () => {
     let searchInput = document.querySelector('input').value.toLowerCase();
     
     let filteredList = candidatesList.filter(el => {
@@ -39,7 +39,7 @@ export const onLoadPage = () => {
     document.querySelector('input').addEventListener('keyup', searchedCandidates);
     allCandidates();
 
-}
+}*/
 
 const switchToSingleCandidate = () => {
     let cardLinks = document.querySelectorAll('.cardLink');
@@ -53,14 +53,5 @@ const switchToSingleCandidate = () => {
     })
 }
 
-export const singleCandidate = () => {
-    let id = localStorage.getItem('id');
-
-    fetch('http://localhost:3333/api/candidates')
-        .then(response => response.json())
-        .then(candidates => {
-            let singleCandidate = candidates.filter(el => el.id == id);            
-            viewSingleCandidate(singleCandidate[0]);
-        })
-}
+export default allCandidates;
 
