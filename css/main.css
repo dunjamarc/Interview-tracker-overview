@@ -44,4 +44,18 @@ div.info h3 {
   width: 100%;
   height: auto; }
 
+table, td, th {
+  border: 1px solid black; }
+
+table {
+  margin: 20px;
+  width: 100%; }
+  table th {
+    background-color: #b3b2b2;
+    padding: 5px; }
+  table tr:nth-child(2n+3) {
+    background-color: #ebe6e6; }
+  table td {
+    padding: 5px; }
+
 /*# sourceMappingURL=main.css.map */

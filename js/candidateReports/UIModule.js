@@ -9,11 +9,11 @@ const viewSingleCandidate = singleCandidate => {
     if (singleCandidate.avatar == "") {
         singleCandidate.avatar = "http://budhubz.com/wp-content/themes/budhubs/images/noavatar.png"
     }
-    document.querySelector('img').setAttribute("src", singleCandidate.avatar);
-    document.querySelector('#name').innerHTML = singleCandidate.name;    
-    document.querySelector('#email').innerHTML = singleCandidate.email;
-    document.querySelector('#dob').innerHTML = date();
-    document.querySelector('#edu').innerHTML = singleCandidate.education;
+    $('img').attr("src", singleCandidate.avatar);
+    $('#name').html(singleCandidate.name);    
+    $('#email').html(singleCandidate.email);
+    $('#dob').html(date());
+    $('#edu').html(singleCandidate.education);
 }
 
 export default viewSingleCandidate;

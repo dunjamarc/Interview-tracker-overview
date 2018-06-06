@@ -57,3 +57,22 @@ div.info h3 {
     width: 100%;
     height: auto;
 }
+
+table, td, th {
+    border: 1px solid black;
+}
+
+table {
+    margin: 20px;
+    width: 100%;
+    th {
+        background-color: rgb(179, 178, 178);
+        padding: 5px;
+    }
+    tr:nth-child(2n+3) {
+        background-color: rgb(235, 230, 230);
+    }
+    td {
+        padding: 5px;
+    }
+}
