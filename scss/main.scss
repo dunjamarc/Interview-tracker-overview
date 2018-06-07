@@ -81,5 +81,11 @@ table {
     tr td:last-child {
         width: 50px;
     }
+    a:focus {
+        outline: none;
+    }
 }
 
+.modal-title {
+    display: inline-block;
+}

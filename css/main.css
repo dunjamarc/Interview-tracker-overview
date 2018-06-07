@@ -61,5 +61,10 @@ table {
       padding: 5px 10px; }
   table tr td:last-child {
     width: 50px; }
+  table a:focus {
+    outline: none; }
+
+.modal-title {
+  display: inline-block; }
 
 /*# sourceMappingURL=main.css.map */

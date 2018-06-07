@@ -17,10 +17,10 @@ const singleCandidate = () => {
         .then(response => response.json())
         .then(reports => {
             reports.forEach(report => {
-                //if(report.candidateId == id){
+                if(report.candidateId == id){
                     const singleReport = createReport(report.candidateId, report.candidateName, report.companyId, report.companyName, report.interviewDate, report.phase, report.status, report.note, report.id);
                     viewReport(singleReport);
-                //}
+                }
             })
         })
 

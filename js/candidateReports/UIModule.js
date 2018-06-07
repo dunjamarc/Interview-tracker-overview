@@ -22,7 +22,7 @@ export const viewReport = singleReport => {
     let td2 = $(`<td>${date(singleReport.interviewDate)}</td>`);
     let td3 = $(`<td>${singleReport.status}</td>`);
     let td4 = $('<td></td>');
-    let a = $('<a href="#"></a>');
+    let a = $('<a href="#myModal" data-toggle="modal"></a>');
     let span = $('<span class="glyphicon glyphicon-eye-open"></span>');
 
     a.append(span);
