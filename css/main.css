@@ -48,7 +48,7 @@ table, td, th {
   border: 1px solid black; }
 
 table {
-  margin: 20px;
+  margin: 20px 15px;
   width: 100%; }
   table th {
     background-color: #b3b2b2;
@@ -57,5 +57,9 @@ table {
     background-color: #ebe6e6; }
   table td {
     padding: 5px; }
+    table td span {
+      padding: 5px 10px; }
+  table tr td:last-child {
+    width: 50px; }
 
 /*# sourceMappingURL=main.css.map */
