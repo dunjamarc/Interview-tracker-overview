@@ -1,4 +1,4 @@
-import createCandidate from '../dataModule.js';
+import { createCandidate } from '../dataModule.js';
 import viewCandidates from './UIModule.js';
 
 let candidatesList = [];
