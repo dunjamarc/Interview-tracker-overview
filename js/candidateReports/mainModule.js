@@ -28,3 +28,5 @@ const singleCandidate = () => {
 
 
 export default singleCandidate;
+
+//console.log(NaN === NaN)

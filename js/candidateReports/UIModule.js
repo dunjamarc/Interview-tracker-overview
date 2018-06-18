@@ -22,7 +22,7 @@ export const viewReport = singleReport => {
     let td2 = $(`<td>${date(singleReport.interviewDate)}</td>`);
     let td3 = $(`<td>${singleReport.status}</td>`);
     let td4 = $('<td></td>');
-    let a = $('<a href="#myModal" data-toggle="modal"></a>');
+    let a = $(`<a href="#${singleReport.id}" data-toggle="modal"></a>`);
     let span = $('<span class="glyphicon glyphicon-eye-open"></span>');
 
     a.append(span);
@@ -33,4 +33,17 @@ export const viewReport = singleReport => {
     tr.append(td4);
 
     $('tbody').append(tr);
+
+    //modal
+    let modal = $('#myModal').clone();    
+    modal.attr('id', singleReport.id);
+    $('body').append(modal);
+
+    $(`#${singleReport.id} h3.modal-title`).html(singleReport.candidateName);
+    $(`#${singleReport.id} h3.com`).html(singleReport.companyName);
+    $(`#${singleReport.id} h3.dat`).html(date(singleReport.interviewDate));
+    $(`#${singleReport.id} h3.pha`).html(singleReport.phase);
+    $(`#${singleReport.id} h3.sta`).html(singleReport.status);
+    $(`#${singleReport.id} p.not`).html(singleReport.note);
+    
 }
