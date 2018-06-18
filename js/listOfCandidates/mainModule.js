@@ -1,5 +1,5 @@
 import { createCandidate } from '../dataModule.js';
-import viewCandidates from './UIModule.js';
+import { viewCandidates, clearList } from './UIModule.js';
 
 let candidatesList = [];
 
@@ -16,13 +16,14 @@ const allCandidates = () => {
                 viewCandidates(oneCandidate);
             })
         })
-        .then(() => {
-            switchToSingleCandidate();
-        })
+        .then(() => switchToSingleCandidate())
+        .then(() => onLoadPage())
+        
 }
 
 
-/*const searchedCandidates = () => {
+const searchedCandidates = () => {
+    clearList();
     let searchInput = document.querySelector('input').value.toLowerCase();
     
     let filteredList = candidatesList.filter(el => {
@@ -35,11 +36,9 @@ const allCandidates = () => {
     })
 }
 
-export const onLoadPage = () => {
+const onLoadPage = () => {
     document.querySelector('input').addEventListener('keyup', searchedCandidates);
-    allCandidates();
-
-}*/
+}
 
 const switchToSingleCandidate = () => {
     let cardLinks = document.querySelectorAll('.cardLink');
